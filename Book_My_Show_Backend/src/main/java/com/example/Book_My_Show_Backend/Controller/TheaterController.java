@@ -1,7 +1,7 @@
 package com.example.Book_My_Show_Backend.Controller;
 
-import com.example.Book_My_Show_Backend.Dtos.MovieRequestDto;
-import com.example.Book_My_Show_Backend.Service.MovieService;
+import com.example.Book_My_Show_Backend.Dtos.TheaterRequestDto;
+import com.example.Book_My_Show_Backend.Service.TheaterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/movie")
-public class MovieController {
+@RequestMapping("/theater")
+public class TheaterController {
 
     @Autowired
-    MovieService movieService;
+    TheaterService theaterService;
 
     @PostMapping("/add")
-    public String addMovie(@RequestBody MovieRequestDto movieRequestDto)
+    public String addTheater(@RequestBody TheaterRequestDto theaterRequestDto)
     {
-        return movieService.addMovie(movieRequestDto);
+        return theaterService.createTheater(theaterRequestDto);
     }
 }

@@ -27,4 +27,7 @@ public class TheaterSeatEntity {
     @ManyToOne
     @JoinColumn
     private TheaterEntity theater;
+
+    public TheaterSeatEntity(String seatNo, SeatType classic, int i) {
+    }
 }
