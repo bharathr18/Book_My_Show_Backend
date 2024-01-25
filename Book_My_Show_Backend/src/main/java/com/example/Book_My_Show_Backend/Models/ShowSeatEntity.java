@@ -26,6 +26,8 @@ public class ShowSeatEntity {
     @Enumerated(value = EnumType.STRING)
     private SeatType seatType;
 
+
+
     private boolean booked;
     private Date bookedAt;
 

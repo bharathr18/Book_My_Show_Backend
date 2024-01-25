@@ -25,7 +25,7 @@ public class ShowEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private LocalDate showdate;
+    private LocalDate showDate;
     private LocalTime showTime;
     private double multiplier;
 

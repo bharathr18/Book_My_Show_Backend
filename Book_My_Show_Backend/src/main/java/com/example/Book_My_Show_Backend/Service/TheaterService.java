@@ -23,7 +23,7 @@ public class TheaterService {
 
     public String createTheater(TheaterRequestDto theaterRequestDto)
     {
-        TheaterEntity theater = TheaterEntity.builder().name(theaterRequestDto.getName()).city(theaterRequestDto.getCity()).address(theaterRequestDto.getAddress()).build();
+        TheaterEntity theater = TheaterEntity.builder().city(theaterRequestDto.getCity()).name(theaterRequestDto.getName()).address(theaterRequestDto.getAddress()).build();
 
         List<TheaterSeatEntity> theaterSeats = createTheaterSeats();
 
@@ -56,7 +56,7 @@ public class TheaterService {
             char ch = (char)('A'+i);
 
             String seatNo  = "1"+ ch;
-            TheaterSeatEntity theaterSeat = new TheaterSeatEntity(seatNo, SeatType.CLASSIC,100);
+            TheaterSeatEntity theaterSeat = new TheaterSeatEntity(seatNo, SeatType.CLASSIC, 100);
             seats.add(theaterSeat);
         }
         for(int i=0;i<5;i++){

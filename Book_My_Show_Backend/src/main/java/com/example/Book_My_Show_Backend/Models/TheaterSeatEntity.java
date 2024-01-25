@@ -2,12 +2,13 @@ package com.example.Book_My_Show_Backend.Models;
 
 import com.example.Book_My_Show_Backend.Enums.SeatType;
 import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "theaterseats")
+@Table(name = "theater_seats")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,6 +29,9 @@ public class TheaterSeatEntity {
     @JoinColumn
     private TheaterEntity theater;
 
-    public TheaterSeatEntity(String seatNo, SeatType classic, int i) {
+    public TheaterSeatEntity(String seatNo,SeatType seatType,int rate){
+        this.seatNo = seatNo;
+        this.seatType = seatType;
+        this.rate = rate;
     }
 }
